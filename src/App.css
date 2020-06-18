@@ -1,9 +1,6 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
-  height: 40vmin;
+  height: 4em;
+  width: 5em;
   pointer-events: none;
 }
 
@@ -12,22 +9,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +16,236 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App {
+  width: 800px;
+  margin: 0 auto;
+  color: #dddddd;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.section-first {
+  background-image: linear-gradient(
+      rgba(30, 30, 30, 0.7),
+      rgba(30, 30, 30, 0.7)
+    ),
+    url('DVDs.jpg');
+  background-color: #232323;
+  height: 300px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 270px;
+  margin-bottom: 6px;
+}
+
+.add-movie-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section-first .add-movie {
+  background-color: rgba(85, 85, 85, 0.6);
+  /* opacity: 0.5; */
+  color: #f65261;
+  border: none;
+  padding: 12px 16px;
+  margin-right: 20px;
+  margin-top: -60px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  border-radius: 3px;
+  font-weight: bolder;
+}
+
+.search-container {
+  margin: 20px 80px;
+}
+
+.search-container h1 {
+  font-weight: lighter;
+}
+
+.search {
+  height: 2em;
+  display: flex;
+  flex-direction: row;
+}
+
+.search input {
+  vertical-align: middle;
+  height: 2em;
+  width: 500px;
+  color: #dddddd;
+  background-color: #232323;
+  border: none;
+  margin-right: 4px;
+}
+.search button {
+  vertical-align: middle;
+  border-radius: 4px;
+  border: none;
+  height: inherit;
+  align-self: flex-end;
+  width: 200px;
+  background-color: #f65261;
+  color: #dddddd;
+}
+
+.section-main {
+  background-color: #232323;
+}
+
+.result {
+  margin: 0 40px;
+}
+
+.results-counter {
+  margin: 1em 0em;
+}
+
+.filter-and-sort {
+  font-size: smaller;
+  display: grid;
+  align-items: top;
+  grid-template-columns: auto auto auto;
+  height: 3em;
+
+  border-bottom: 0.1em solid;
+}
+
+.filter {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 3em;
+  display: block;
+}
+
+.filter ul {
+  list-style-type: none;
+  height: 3em;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+
+.filter ul li {
+  float: left;
+  display: block;
+  padding: 1em 8px;
+  margin: 0;
+  height: 1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.filter ul li:first-child {
+  border-bottom: #f65261 0.1em solid;
+}
+
+.sort {
+  justify-self: end;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  margin: 1em;
+
+  background-color: #232323;
+}
+
+.sort select {
+  color: #dddddd;
+  background-color: #232323;
+  border: none;
+}
+
+.sort label {
+  margin: 1em;
+}
+
+.result-list {
+  min-height: 500px;
+}
+
+.result-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-list ul li {
+  float: left;
+  display: block;
+  color: #dddddd;
+  padding: 1em 0px;
+  margin: 0;
+}
+.movie-image {
+  height: 290px;
+  width: 200px;
+  display: grid;
+}
+
+.movie-image.image1 {
+  background-image: url('pulpfiction.jpg');
+}
+
+.movie-card .movie-image:hover .dots {
+  background-color: #232323;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  justify-self: end;
+  margin: 15px;
+  content: '\2807';
+  color: #dddddd;
+  font-size: larger;
+  text-align: center;
+  justify-content: center;
+  text-shadow: 0px 0px 1px #dddddd;
+}
+
+.movie-data {
+  font-size: smaller;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 5px;
+}
+
+.movie-data .title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 0.2em 0;
+}
+.movie-data .genre {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2;
+}
+.movie-data .year {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  justify-self: end;
+  margin: 0.2em 0;
+  padding: 0 1em;
+  border: 0.5px solid;
+  border-radius: 4px;
+}
+
+.footer {
+  height: 45px;
+  background-color: #424242;
+  color: #f65261;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer p {
+  padding: 0.6em 0;
+  margin: 0;
 }
